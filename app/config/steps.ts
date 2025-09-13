@@ -33,7 +33,7 @@ export const stepConfigs: StepConfig[] = [
     title: "CDN (Contentful)",
     shortTitle: "Step 3: CDN (Contentful)",
     description: "Serve images from Contentful CDN for global distribution",
-    status: "in-progress",
+    status: "ready",
     route: "/step-3",
   },
   {
