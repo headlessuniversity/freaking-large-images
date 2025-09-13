@@ -24,7 +24,7 @@ export const stepConfigs: StepConfig[] = [
     title: "Public Folder",
     shortTitle: "Step 2: Public Folder",
     description: "Move images to public directory for direct serving",
-    status: "in-progress",
+    status: "ready",
     route: "/step-2",
   },
   {
