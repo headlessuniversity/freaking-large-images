@@ -42,7 +42,7 @@ export const stepConfigs: StepConfig[] = [
     title: "Modern Formats",
     shortTitle: "Step 4: Modern Formats",
     description: "Use Contentful's format optimization (WebP, AVIF)",
-    status: "in-progress",
+    status: "ready",
     route: "/step-4",
   },
   {
