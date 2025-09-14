@@ -1,10 +1,10 @@
 // Step 3: Images served from Contentful CDN
 import { BaseStepView } from "../../components/BaseStepView";
-import { getStepImages } from "../../config/contentful-assets";
+import { getStepImagesWithModal } from "../../config/contentful-assets";
 
 export function StepThree({ message }: { message: string }) {
-  // Basic CDN - no optimization parameters
-  const images = getStepImages();
+  // Basic CDN - no optimization parameters for display, full quality for modal
+  const images = getStepImagesWithModal();
 
   return (
     <BaseStepView

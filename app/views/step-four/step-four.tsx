@@ -1,10 +1,10 @@
 // Step 4: Images served from Contentful CDN with WebP format
 import { BaseStepView } from "../../components/BaseStepView";
-import { getStepImages } from "../../config/contentful-assets";
+import { getStepImagesWithModal } from "../../config/contentful-assets";
 
 export function StepFour({ message }: { message: string }) {
-  // WebP format optimization
-  const images = getStepImages({
+  // WebP format optimization for display, full quality for modal
+  const images = getStepImagesWithModal({
     params: "?fm=webp",
   });
 

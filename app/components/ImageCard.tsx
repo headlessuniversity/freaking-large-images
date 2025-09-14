@@ -1,8 +1,11 @@
+import { useEffect } from "react";
+
 interface ImageCardProps {
   src: string;
   alt: string;
   title: string;
   headerBgColor: string;
+  modalSrc?: string; // Optional high-quality URL for modal
   onClick?: () => void;
 }
 
@@ -12,6 +15,7 @@ interface SpriteImageCardProps {
   alt: string;
   title: string;
   headerBgColor: string;
+  modalSrc?: string; // Optional high-quality URL for modal
   onClick?: () => void;
 }
 
@@ -20,8 +24,21 @@ export function ImageCard({
   alt,
   title,
   headerBgColor,
+  modalSrc,
   onClick,
 }: ImageCardProps) {
+  // Preload modal image after 2 seconds
+  useEffect(() => {
+    if (modalSrc) {
+      const timer = setTimeout(() => {
+        const img = new Image();
+        img.src = modalSrc;
+      }, 2000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [modalSrc]);
+
   return (
     <div
       className="bg-gray-800 rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow h-fit"
@@ -48,11 +65,24 @@ export function SpriteImageCard({
   alt,
   title,
   headerBgColor,
+  modalSrc,
   onClick,
 }: SpriteImageCardProps) {
   // Calculate background position based on sprite position
   // Position 0: 0%, Position 1: 33.33%, Position 2: 66.66%, Position 3: 100%
   const backgroundPositionX = spritePosition * 33.33;
+
+  // Preload modal image after 2 seconds
+  useEffect(() => {
+    if (modalSrc) {
+      const timer = setTimeout(() => {
+        const img = new Image();
+        img.src = modalSrc;
+      }, 2000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [modalSrc]);
 
   return (
     <div

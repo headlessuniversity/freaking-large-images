@@ -1,4 +1,5 @@
 import { BaseStepView } from "../../components/BaseStepView";
+import { contentfulAssets } from "../../config/contentful-assets";
 
 /*
 Step 6: Image Sprites with Client-Side Cropping
@@ -31,6 +32,7 @@ export function StepSix({ message }: { message: string }) {
       alt: "Jezael Melgoza Photography",
       title: "Jezael Melgoza Photo",
       headerBgColor: "bg-blue-500",
+      modalSrc: contentfulAssets[0].baseUrl, // Map to individual Contentful asset
     },
     {
       spriteUrl: SPRITE_URL,
@@ -38,6 +40,7 @@ export function StepSix({ message }: { message: string }) {
       alt: "NASA Photography",
       title: "NASA Photo",
       headerBgColor: "bg-purple-500",
+      modalSrc: contentfulAssets[1].baseUrl, // Map to individual Contentful asset
     },
     {
       spriteUrl: SPRITE_URL,
@@ -45,6 +48,7 @@ export function StepSix({ message }: { message: string }) {
       alt: "PHC Software Photography 1",
       title: "PHC Software Photo 1",
       headerBgColor: "bg-green-500",
+      modalSrc: contentfulAssets[2].baseUrl, // Map to individual Contentful asset
     },
     {
       spriteUrl: SPRITE_URL,
@@ -52,6 +56,7 @@ export function StepSix({ message }: { message: string }) {
       alt: "PHC Software Photography 2",
       title: "PHC Software Photo 2",
       headerBgColor: "bg-orange-500",
+      modalSrc: contentfulAssets[3].baseUrl, // Map to individual Contentful asset
     },
   ];
 

@@ -7,6 +7,7 @@ interface StepImage {
   alt: string;
   title: string;
   headerBgColor: string;
+  modalSrc?: string; // Optional high-quality URL for modal
 }
 
 interface SpriteStepImage {
@@ -15,6 +16,7 @@ interface SpriteStepImage {
   alt: string;
   title: string;
   headerBgColor: string;
+  modalSrc?: string; // Optional high-quality URL for modal
 }
 
 interface BaseStepViewProps {
@@ -75,6 +77,7 @@ export function BaseStepView({
                   alt={image.alt}
                   title={image.title}
                   headerBgColor={image.headerBgColor}
+                  modalSrc={image.modalSrc}
                   onClick={() => setSelectedImage(image)}
                 />
               </div>
@@ -87,6 +90,7 @@ export function BaseStepView({
                   alt={image.alt}
                   title={image.title}
                   headerBgColor={image.headerBgColor}
+                  modalSrc={image.modalSrc}
                   onClick={() => setSelectedImage(image)}
                 />
               </div>
@@ -106,14 +110,15 @@ export function BaseStepView({
         </a>
       </div>
 
-      {/* Modal - Note: Modal will show sprite URL for sprite images, which shows the full sprite */}
+      {/* Modal - Shows high-quality modalSrc if available, otherwise falls back to display image */}
       <ImageModal
         src={
-          selectedImage && "src" in selectedImage
+          selectedImage?.modalSrc ||
+          (selectedImage && "src" in selectedImage
             ? selectedImage.src
             : selectedImage && "spriteUrl" in selectedImage
               ? selectedImage.spriteUrl
-              : ""
+              : "")
         }
         alt={selectedImage?.alt || ""}
         isOpen={!!selectedImage}

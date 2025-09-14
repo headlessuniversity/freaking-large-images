@@ -62,3 +62,25 @@ export function getStepImages(options?: { params?: string }): Array<{
     };
   });
 }
+
+// Helper function to get image data with both optimized and modal (full-quality) URLs
+export function getStepImagesWithModal(options?: { params?: string }): Array<{
+  src: string;
+  modalSrc: string;
+  alt: string;
+  title: string;
+  headerBgColor: string;
+}> {
+  return contentfulAssets.map((asset) => {
+    const src = asset.baseUrl + (options?.params || "");
+    const modalSrc = asset.baseUrl; // Full quality - no optimization parameters
+
+    return {
+      src,
+      modalSrc,
+      alt: asset.alt,
+      title: asset.title,
+      headerBgColor: asset.headerBgColor,
+    };
+  });
+}
