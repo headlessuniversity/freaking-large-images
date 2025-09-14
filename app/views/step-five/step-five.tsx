@@ -1,16 +1,16 @@
-// Step 5: Images served from Contentful CDN with AVIF format and quality optimization
+// Step 5: Images served from Contentful CDN with combined optimizations
 import { BaseStepView } from "../../components/BaseStepView";
 import { getStepImagesWithModal } from "../../config/contentful-assets";
 
 export function StepFive({ message }: { message: string }) {
-  // AVIF format with quality and width optimization for display, full quality for modal
-  const images = getStepImagesWithModal({ params: "?fm=avif&q=25&w=800" });
+  // Combined optimizations: WebP format + resizing + quality adjustment for display, full quality for modal
+  const images = getStepImagesWithModal({ params: "?fm=webp&w=800&q=60" });
 
   return (
     <BaseStepView
       stepNumber={5}
-      title="Responsive Sizing"
-      description="Images optimized with AVIF format and quality settings - smaller file sizes with better compression"
+      title="Combined Optimization"
+      description="All optimizations combined - WebP format, 800px width resizing, and 60% quality adjustment for maximum efficiency"
       images={images}
       message={message}
     />

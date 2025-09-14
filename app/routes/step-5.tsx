@@ -3,10 +3,11 @@ import { StepFive as StepFiveView } from "../views/step-five/step-five";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Step 5: Responsive Sizing - Freaking Large Images" },
+    { title: "Step 5: Combined Optimization - Freaking Large Images" },
     {
       name: "description",
-      content: "Dynamic image resizing with Contentful's API parameters",
+      content:
+        "All optimizations combined - WebP format, resizing, and quality adjustment for maximum efficiency",
     },
   ];
 }

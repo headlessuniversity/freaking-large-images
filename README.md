@@ -78,7 +78,8 @@ Ready to build:
 2. ⚡ **Optimized images demo route** - Show fast-loading optimized images
 3. 📊 **Comparison page** - Side-by-side performance comparison
 4. 🔍 **Performance monitoring** - Load time measurements
-5. 🎛️ **Optimization techniques** - WebP, AVIF, responsive images, lazy loading
+5. 🎛️ **Optimization techniques** - WebP format conversion, responsive images,
+   lazy loading
 
 ## Image Optimization Features to Implement
 
