@@ -5,16 +5,17 @@ import { useSearchParams } from "react-router";
 
 export default function Test() {
   const [searchParams] = useSearchParams();
-  
-  // Get params from URL query string (e.g., /test?params=?fm=webp&q=50&w=600)
-  const urlParams = searchParams.get("params") || "";
-  
+
+  // Convert URL search params directly to Contentful query string
+  const params = searchParams.toString();
+  const contentfulParams = params ? `?${params}` : "";
+
   // Use the URL params directly with getStepImages
-  const images = getStepImages({ params: urlParams });
+  const images = getStepImages({ params: contentfulParams });
 
   // Create a display-friendly version of the params
-  const displayParams = urlParams || "(no parameters - basic CDN)";
-  
+  const displayParams = contentfulParams || "(no parameters - basic CDN)";
+
   return (
     <BaseStepView
       stepNumber={0}
