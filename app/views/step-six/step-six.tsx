@@ -1,33 +1,54 @@
-// Import the images
-import jezaelImage from "./jezael-melgoza-layMbSJ3YOE-unsplash.jpg";
-import nasaImage from "./nasa-rTZW4f02zY8-unsplash.jpg";
-import phcImage1 from "./phc-software-3nSnUNGTUqo-unsplash.jpg";
-import phcImage2 from "./phc-software-Q0ClVjV8ts0-unsplash.jpg";
-
 import { BaseStepView } from "../../components/BaseStepView";
 
+/*
+Step 6: Image Sprites with Client-Side Cropping
+
+This step demonstrates using a single sprite image containing all 4 images stitched together horizontally.
+The sprite URL contains all images in 16:9 ratio from left to right: Jezael → NASA → PHC1 → PHC2.
+Instead of downloading 4 separate images, we download 1 sprite and use CSS background-position 
+to crop out the individual images on the client side.
+
+Benefits:
+- Single HTTP request instead of 4 separate requests
+- Better caching (one image cached and reused)
+- Reduced network overhead and connection costs
+- Client-side image manipulation demonstration
+*/
+
+const SPRITE_BASE_URL =
+  "https://images.ctfassets.net/14fez5s3hrmy/5UptPk5DBo8H3Unrimhu6s/aa6e260ab7f15fc806558e4cea52731b/allFourImages.jpg";
+
+// Contentful optimization parameters for the sprite image
+const SPRITE_QUERY_PARAMS = "?fm=webp&q=50&h=1080";
+
+const SPRITE_URL = SPRITE_BASE_URL + SPRITE_QUERY_PARAMS;
+
 export function StepSix({ message }: { message: string }) {
-  const images = [
+  const spriteImages = [
     {
-      src: jezaelImage,
+      spriteUrl: SPRITE_URL,
+      spritePosition: 0, // First image (0-25%)
       alt: "Jezael Melgoza Photography",
       title: "Jezael Melgoza Photo",
       headerBgColor: "bg-blue-500",
     },
     {
-      src: nasaImage,
+      spriteUrl: SPRITE_URL,
+      spritePosition: 1, // Second image (25-50%)
       alt: "NASA Photography",
       title: "NASA Photo",
       headerBgColor: "bg-purple-500",
     },
     {
-      src: phcImage1,
+      spriteUrl: SPRITE_URL,
+      spritePosition: 2, // Third image (50-75%)
       alt: "PHC Software Photography 1",
       title: "PHC Software Photo 1",
       headerBgColor: "bg-green-500",
     },
     {
-      src: phcImage2,
+      spriteUrl: SPRITE_URL,
+      spritePosition: 3, // Fourth image (75-100%)
       alt: "PHC Software Photography 2",
       title: "PHC Software Photo 2",
       headerBgColor: "bg-orange-500",
@@ -37,9 +58,9 @@ export function StepSix({ message }: { message: string }) {
   return (
     <BaseStepView
       stepNumber={6}
-      title="Image Sprites with Smart Cropping"
-      description="Combine cropping, stitching images together, and sprite technique for optimal thumbnails - currently using same approach as Step 1 for baseline"
-      images={images}
+      title="Image Sprites with Client-Side Cropping"
+      description="Single sprite image downloaded once, then cropped client-side using CSS background-position to show individual images - reduces HTTP requests from 4 to 1"
+      spriteImages={spriteImages}
       message={message}
     />
   );

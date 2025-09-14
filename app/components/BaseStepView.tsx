@@ -1,4 +1,4 @@
-import { ImageCard } from "./ImageCard";
+import { ImageCard, SpriteImageCard } from "./ImageCard";
 import { ImageModal } from "./ImageModal";
 import { useState } from "react";
 
@@ -9,11 +9,20 @@ interface StepImage {
   headerBgColor: string;
 }
 
+interface SpriteStepImage {
+  spriteUrl: string;
+  spritePosition: number;
+  alt: string;
+  title: string;
+  headerBgColor: string;
+}
+
 interface BaseStepViewProps {
   stepNumber: number;
   title: string;
   description?: string;
-  images: StepImage[];
+  images?: StepImage[];
+  spriteImages?: SpriteStepImage[];
   message?: string;
 }
 
@@ -22,9 +31,16 @@ export function BaseStepView({
   title,
   description,
   images,
+  spriteImages,
   message,
 }: BaseStepViewProps) {
-  const [selectedImage, setSelectedImage] = useState<StepImage | null>(null);
+  const [selectedImage, setSelectedImage] = useState<
+    StepImage | SpriteStepImage | null
+  >(null);
+
+  // Use either regular images or sprite images
+  const displayImages = images || spriteImages || [];
+  const isSprite = !!spriteImages;
 
   return (
     <main className="min-h-screen bg-gray-900 p-4">
@@ -45,33 +61,60 @@ export function BaseStepView({
         </div>
       </div>
 
-      {/* Image Grid - 2x2 Layout */}
-      <div className="grid grid-cols-2 gap-4 max-w-6xl mx-auto h-[calc(100vh-250px)]">
-        {images.map((image, index) => (
-          <ImageCard
-            key={index}
-            src={image.src}
-            alt={image.alt}
-            title={image.title}
-            headerBgColor={image.headerBgColor}
-            onClick={() => setSelectedImage(image)}
-          />
-        ))}
+      {/* Image Layout - 2x2 on desktop, 1 column on mobile */}
+      <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
+        {displayImages.map((image, index) => {
+          const cardClasses = "w-full sm:w-[calc(50%-0.5rem)]"; // Full width on mobile, half width on desktop
+
+          if (isSprite && "spriteUrl" in image) {
+            return (
+              <div key={index} className={cardClasses}>
+                <SpriteImageCard
+                  spriteUrl={image.spriteUrl}
+                  spritePosition={image.spritePosition}
+                  alt={image.alt}
+                  title={image.title}
+                  headerBgColor={image.headerBgColor}
+                  onClick={() => setSelectedImage(image)}
+                />
+              </div>
+            );
+          } else if ("src" in image) {
+            return (
+              <div key={index} className={cardClasses}>
+                <ImageCard
+                  src={image.src}
+                  alt={image.alt}
+                  title={image.title}
+                  headerBgColor={image.headerBgColor}
+                  onClick={() => setSelectedImage(image)}
+                />
+              </div>
+            );
+          }
+          return null;
+        })}
       </div>
 
       {/* Navigation */}
       <div className="text-center mt-8">
         <a
-          href="/home"
+          href="/"
           className="inline-block bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-medium transition-colors"
         >
           ← Back to Steps Overview
         </a>
       </div>
 
-      {/* Modal */}
+      {/* Modal - Note: Modal will show sprite URL for sprite images, which shows the full sprite */}
       <ImageModal
-        src={selectedImage?.src || ""}
+        src={
+          selectedImage && "src" in selectedImage
+            ? selectedImage.src
+            : selectedImage && "spriteUrl" in selectedImage
+              ? selectedImage.spriteUrl
+              : ""
+        }
         alt={selectedImage?.alt || ""}
         isOpen={!!selectedImage}
         onClose={() => setSelectedImage(null)}

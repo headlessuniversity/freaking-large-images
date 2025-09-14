@@ -58,11 +58,11 @@ export const stepConfigs: StepConfig[] = [
   {
     id: "step-6",
     number: 6,
-    title: "Image Sprites with Smart Cropping",
-    shortTitle: "Step 6: Image Sprites with Smart Cropping",
+    title: "Image Sprites with Client-Side Cropping",
+    shortTitle: "Step 6: Image Sprites with Client-Side Cropping",
     description:
-      "Combine cropping, stitching images together, and sprite technique for optimal thumbnails",
-    status: "in-progress",
+      "Single sprite image downloaded once, then cropped client-side using CSS background-position - reduces HTTP requests from 4 to 1",
+    status: "ready",
     route: "/step-6",
   },
 ];
