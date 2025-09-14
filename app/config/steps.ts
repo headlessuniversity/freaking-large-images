@@ -50,8 +50,9 @@ export const stepConfigs: StepConfig[] = [
     number: 5,
     title: "Responsive Sizing",
     shortTitle: "Step 5: Responsive Sizing",
-    description: "Dynamic image resizing with Contentful's API parameters",
-    status: "in-progress",
+    description:
+      "Images optimized with AVIF format and quality settings - smaller file sizes with better compression",
+    status: "ready",
     route: "/step-5",
   },
   {

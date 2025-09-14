@@ -5,6 +5,16 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+/* Ensure smooth font loading with system font fallback */
+body {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Apply Inter when loaded */
+.fonts-loaded body {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
 html,
 body {
   @apply bg-white dark:bg-gray-950;

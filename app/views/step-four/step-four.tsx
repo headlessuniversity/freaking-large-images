@@ -3,7 +3,8 @@ import { BaseStepView } from "../../components/BaseStepView";
 import { getStepImages } from "../../config/contentful-assets";
 
 export function StepFour({ message }: { message: string }) {
-  const images = getStepImages(4);
+  // WebP format optimization
+  const images = getStepImages({ params: "?fm=webp" });
 
   return (
     <BaseStepView

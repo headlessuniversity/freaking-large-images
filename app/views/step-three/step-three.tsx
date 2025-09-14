@@ -3,7 +3,8 @@ import { BaseStepView } from "../../components/BaseStepView";
 import { getStepImages } from "../../config/contentful-assets";
 
 export function StepThree({ message }: { message: string }) {
-  const images = getStepImages(3);
+  // Basic CDN - no optimization parameters
+  const images = getStepImages();
 
   return (
     <BaseStepView

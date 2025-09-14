@@ -44,34 +44,15 @@ export const contentfulAssets: ContentfulAsset[] = [
   },
 ];
 
-// Helper function to get image data for different steps
-export function getStepImages(step: 3 | 4 | 5 | 6): Array<{
+// Helper function to get image data with optional Contentful API parameters
+export function getStepImages(options?: { params?: string }): Array<{
   src: string;
   alt: string;
   title: string;
   headerBgColor: string;
 }> {
   return contentfulAssets.map((asset) => {
-    let src = asset.baseUrl;
-
-    // Apply step-specific optimizations
-    switch (step) {
-      case 3:
-        // Step 3: Basic CDN (no modifications)
-        break;
-      case 4:
-        // Step 4: Modern formats (WebP)
-        src += "?fm=webp";
-        break;
-      case 5:
-        // Step 5: Responsive sizing (will be handled differently with srcset)
-        src += "?fm=webp&w=800";
-        break;
-      case 6:
-        // Step 6: Smart cropping
-        src += "?fm=webp&w=400&h=300&fit=fill&f=face";
-        break;
-    }
+    const src = asset.baseUrl + (options?.params || "");
 
     return {
       src,
