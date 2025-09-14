@@ -84,6 +84,29 @@ export default function Home() {
             </div>
           ))}
         </div>
+
+        {/* Test Route Section */}
+        <div className="mt-12 pt-8 border-t border-gray-700">
+          <h2 className="text-2xl font-bold text-white mb-4 text-center">
+            🧪 Test Route
+          </h2>
+          <p className="text-gray-300 text-center mb-6 max-w-2xl mx-auto">
+            Experiment with Contentful API parameters in real-time by adding them to the URL
+          </p>
+          <div className="text-center">
+            <Link
+              to="/test"
+              className="inline-block bg-yellow-600 hover:bg-yellow-500 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+            >
+              Go to Test Route →
+            </Link>
+          </div>
+          <div className="mt-4 text-center">
+            <p className="text-sm text-gray-400">
+              Example: <code className="bg-gray-800 px-2 py-1 rounded">/test?params=?fm=webp&q=50&w=600</code>
+            </p>
+          </div>
+        </div>
       </div>
     </main>
   );

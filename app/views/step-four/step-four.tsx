@@ -4,7 +4,9 @@ import { getStepImages } from "../../config/contentful-assets";
 
 export function StepFour({ message }: { message: string }) {
   // WebP format optimization
-  const images = getStepImages({ params: "?fm=webp" });
+  const images = getStepImages({
+    params: "?fm=webp",
+  });
 
   return (
     <BaseStepView
