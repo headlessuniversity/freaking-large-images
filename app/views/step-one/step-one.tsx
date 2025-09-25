@@ -12,25 +12,25 @@ export function StepOne({ message }: { message: string }) {
       src: jezaelImage,
       alt: "Jezael Melgoza Photography",
       title: "Jezael Melgoza Photo",
-      headerBgColor: "bg-blue-500",
+      headerBgColor: "bg-blue-700",
     },
     {
       src: nasaImage,
       alt: "NASA Photography",
       title: "NASA Photo",
-      headerBgColor: "bg-purple-500",
+      headerBgColor: "bg-purple-700",
     },
     {
       src: phcImage1,
       alt: "PHC Software Photography 1",
       title: "PHC Software Photo 1",
-      headerBgColor: "bg-green-500",
+      headerBgColor: "bg-green-700",
     },
     {
       src: phcImage2,
       alt: "PHC Software Photography 2",
       title: "PHC Software Photo 2",
-      headerBgColor: "bg-orange-500",
+      headerBgColor: "bg-orange-700",
     },
   ];
 

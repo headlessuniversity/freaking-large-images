@@ -10,6 +10,8 @@ export default [
   route("step-4c", "routes/step-4c.tsx"),
   route("step-5", "routes/step-5.tsx"),
   route("step-6", "routes/step-6.tsx"),
+  route("step-7", "routes/step-7.tsx"),
+  route("step-8", "routes/step-8.tsx"),
   route("test", "routes/test.tsx"),
   route("*", "routes/$.tsx"), // Catch-all route for unmatched paths
 ] satisfies RouteConfig;

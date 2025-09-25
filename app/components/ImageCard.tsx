@@ -6,6 +6,8 @@ interface ImageCardProps {
   title: string;
   headerBgColor: string;
   modalSrc?: string; // Optional high-quality URL for modal
+  srcset?: string; // Optional srcset for responsive images
+  sizes?: string; // Optional sizes attribute for responsive images
   onClick?: () => void;
 }
 
@@ -25,6 +27,8 @@ export function ImageCard({
   title,
   headerBgColor,
   modalSrc,
+  srcset,
+  sizes,
   onClick,
 }: ImageCardProps) {
   // Preload modal image after 2 seconds
@@ -45,11 +49,13 @@ export function ImageCard({
       onClick={onClick}
     >
       <div className={`p-4 ${headerBgColor}`}>
-        <h3 className="font-semibold text-white">{title}</h3>
+        <h2 className="font-semibold text-white">{title}</h2>
       </div>
       <div className="p-4">
         <img
           src={src}
+          srcSet={srcset}
+          sizes={sizes}
           alt={alt}
           className="w-full aspect-video object-cover rounded-md"
           loading="eager"
@@ -90,7 +96,7 @@ export function SpriteImageCard({
       onClick={onClick}
     >
       <div className={`p-4 ${headerBgColor}`}>
-        <h3 className="font-semibold text-white">{title}</h3>
+        <h2 className="font-semibold text-white">{title}</h2>
       </div>
       <div className="p-4">
         <div

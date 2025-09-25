@@ -18,8 +18,8 @@ export function StepOne({ message }: { message: string }) {
       <div className="grid grid-cols-2 gap-4 max-w-6xl mx-auto h-[calc(100vh-200px)]">
         {/* Top Left Quadrant */}
         <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-          <div className="p-4 bg-blue-500">
-            <h3 className="font-semibold text-white">Jezael Melgoza Photo</h3>
+          <div className="p-4 bg-blue-700">
+            <h2 className="font-semibold text-white">Jezael Melgoza Photo</h2>
           </div>
           <div className="h-full p-4">
             <img
@@ -33,8 +33,8 @@ export function StepOne({ message }: { message: string }) {
 
         {/* Top Right Quadrant */}
         <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-          <div className="p-4 bg-purple-500">
-            <h3 className="font-semibold text-white">NASA Photo</h3>
+          <div className="p-4 bg-purple-700">
+            <h2 className="font-semibold text-white">NASA Photo</h2>
           </div>
           <div className="h-full p-4">
             <img
@@ -48,8 +48,8 @@ export function StepOne({ message }: { message: string }) {
 
         {/* Bottom Left Quadrant */}
         <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-          <div className="p-4 bg-green-500">
-            <h3 className="font-semibold text-white">PHC Software Photo 1</h3>
+          <div className="p-4 bg-green-700">
+            <h2 className="font-semibold text-white">PHC Software Photo 1</h2>
           </div>
           <div className="h-full p-4">
             <img
@@ -63,8 +63,8 @@ export function StepOne({ message }: { message: string }) {
 
         {/* Bottom Right Quadrant */}
         <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-          <div className="p-4 bg-orange-500">
-            <h3 className="font-semibold text-white">PHC Software Photo 2</h3>
+          <div className="p-4 bg-orange-700">
+            <h2 className="font-semibold text-white">PHC Software Photo 2</h2>
           </div>
           <div className="h-full p-4">
             <img

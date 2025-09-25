@@ -7,25 +7,25 @@ export function StepTwo({ message }: { message: string }) {
       src: "/images/step-2/jezael-melgoza-layMbSJ3YOE-unsplash.jpg",
       alt: "Jezael Melgoza Photography",
       title: "Jezael Melgoza Photo",
-      headerBgColor: "bg-blue-500",
+      headerBgColor: "bg-blue-700",
     },
     {
       src: "/images/step-2/nasa-rTZW4f02zY8-unsplash.jpg",
       alt: "NASA Photography",
       title: "NASA Photo",
-      headerBgColor: "bg-purple-500",
+      headerBgColor: "bg-purple-700",
     },
     {
       src: "/images/step-2/phc-software-3nSnUNGTUqo-unsplash.jpg",
       alt: "PHC Software Photography 1",
       title: "PHC Software Photo 1",
-      headerBgColor: "bg-green-500",
+      headerBgColor: "bg-green-700",
     },
     {
       src: "/images/step-2/phc-software-Q0ClVjV8ts0-unsplash.jpg",
       alt: "PHC Software Photography 2",
       title: "PHC Software Photo 2",
-      headerBgColor: "bg-orange-500",
+      headerBgColor: "bg-orange-700",
     },
   ];
 

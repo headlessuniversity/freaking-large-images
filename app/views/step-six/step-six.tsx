@@ -31,7 +31,7 @@ export function StepSix({ message }: { message: string }) {
       spritePosition: 0, // First image (0-25%)
       alt: "Jezael Melgoza Photography",
       title: "Jezael Melgoza Photo",
-      headerBgColor: "bg-blue-500",
+      headerBgColor: "bg-blue-700",
       modalSrc: contentfulAssets[0].baseUrl, // Map to individual Contentful asset
     },
     {
@@ -39,7 +39,7 @@ export function StepSix({ message }: { message: string }) {
       spritePosition: 1, // Second image (25-50%)
       alt: "NASA Photography",
       title: "NASA Photo",
-      headerBgColor: "bg-purple-500",
+      headerBgColor: "bg-purple-700",
       modalSrc: contentfulAssets[1].baseUrl, // Map to individual Contentful asset
     },
     {
@@ -47,7 +47,7 @@ export function StepSix({ message }: { message: string }) {
       spritePosition: 2, // Third image (50-75%)
       alt: "PHC Software Photography 1",
       title: "PHC Software Photo 1",
-      headerBgColor: "bg-green-500",
+      headerBgColor: "bg-green-700",
       modalSrc: contentfulAssets[2].baseUrl, // Map to individual Contentful asset
     },
     {
@@ -55,7 +55,7 @@ export function StepSix({ message }: { message: string }) {
       spritePosition: 3, // Fourth image (75-100%)
       alt: "PHC Software Photography 2",
       title: "PHC Software Photo 2",
-      headerBgColor: "bg-orange-500",
+      headerBgColor: "bg-orange-700",
       modalSrc: contentfulAssets[3].baseUrl, // Map to individual Contentful asset
     },
   ];

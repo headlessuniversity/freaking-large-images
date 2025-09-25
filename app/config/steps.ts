@@ -85,4 +85,24 @@ export const stepConfigs: StepConfig[] = [
     status: "ready",
     route: "/step-6",
   },
+  // {
+  //   id: "step-7",
+  //   number: 7,
+  //   title: "Responsive Images",
+  //   shortTitle: "Step 7: Responsive Images",
+  //   description:
+  //     "Mobile-first responsive images using srcset - browser automatically selects optimal image size based on screen width",
+  //   status: "ready",
+  //   route: "/step-7",
+  // },
+  // {
+  //   id: "step-8",
+  //   number: 8,
+  //   title: "Dynamic Content from Contentful API",
+  //   shortTitle: "Step 8: Dynamic Content (Bonus)",
+  //   description:
+  //     "Fetch images, alt text, and descriptions dynamically from Contentful API - supports multilingual accessibility and eliminates hardcoded content",
+  //   status: "ready",
+  //   route: "/step-8",
+  // },
 ];

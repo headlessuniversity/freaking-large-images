@@ -25,10 +25,12 @@ export default function Home() {
       {/* Steps Grid */}
       <div className="max-w-4xl mx-auto">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {stepConfigs.map((step) => (
-            <div
-              key={step.id}
-              className={`
+          {stepConfigs
+            .filter((step) => step.id !== "step-7" && step.id !== "step-8")
+            .map((step) => (
+              <div
+                key={step.id}
+                className={`
                 rounded-lg p-6 border-2 transition-all
                 ${
                   step.status === "ready"
@@ -38,14 +40,39 @@ export default function Home() {
                       : "bg-gray-800/50 border-gray-600 cursor-not-allowed"
                 }
               `}
-            >
-              <Link to={step.route} className="block h-full">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-lg font-semibold text-white">
-                    {step.shortTitle}
-                  </h3>
-                  <span
-                    className={`text-sm font-medium ${
+              >
+                <Link to={step.route} className="block h-full">
+                  <div className="flex items-center justify-between mb-3">
+                    <h2 className="text-lg font-semibold text-white">
+                      {step.shortTitle}
+                    </h2>
+                    <span
+                      className={`text-sm font-medium ${
+                        step.status === "ready"
+                          ? "text-green-400"
+                          : step.status === "in-progress"
+                            ? "text-orange-400"
+                            : "text-gray-500"
+                      }`}
+                    >
+                      {step.status === "ready"
+                        ? "READY"
+                        : step.status === "in-progress"
+                          ? "IN PROGRESS"
+                          : "COMING SOON"}
+                    </span>
+                  </div>
+                  <p
+                    className={`text-sm leading-relaxed ${
+                      step.status === "ready" || step.status === "in-progress"
+                        ? "text-gray-300"
+                        : "text-gray-500"
+                    }`}
+                  >
+                    {step.description}
+                  </p>
+                  <div
+                    className={`mt-4 text-sm font-medium ${
                       step.status === "ready"
                         ? "text-green-400"
                         : step.status === "in-progress"
@@ -53,36 +80,11 @@ export default function Home() {
                           : "text-gray-500"
                     }`}
                   >
-                    {step.status === "ready"
-                      ? "READY"
-                      : step.status === "in-progress"
-                        ? "IN PROGRESS"
-                        : "COMING SOON"}
-                  </span>
-                </div>
-                <p
-                  className={`text-sm leading-relaxed ${
-                    step.status === "ready" || step.status === "in-progress"
-                      ? "text-gray-300"
-                      : "text-gray-500"
-                  }`}
-                >
-                  {step.description}
-                </p>
-                <div
-                  className={`mt-4 text-sm font-medium ${
-                    step.status === "ready"
-                      ? "text-green-400"
-                      : step.status === "in-progress"
-                        ? "text-orange-400"
-                        : "text-gray-500"
-                  }`}
-                >
-                  View Demo →
-                </div>
-              </Link>
-            </div>
-          ))}
+                    View Demo →
+                  </div>
+                </Link>
+              </div>
+            ))}
         </div>
 
         {/* Test Route Section */}

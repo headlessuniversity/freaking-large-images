@@ -8,6 +8,8 @@ interface StepImage {
   title: string;
   headerBgColor: string;
   modalSrc?: string; // Optional high-quality URL for modal
+  srcset?: string; // Optional srcset for responsive images
+  sizes?: string; // Optional sizes attribute for responsive images
 }
 
 interface SpriteStepImage {
@@ -20,7 +22,7 @@ interface SpriteStepImage {
 }
 
 interface BaseStepViewProps {
-  stepNumber: number;
+  stepNumber: number | string;
   title: string;
   description?: string;
   images?: StepImage[];
@@ -57,7 +59,7 @@ export function BaseStepView({
           </p>
         )}
         <div className="mt-4">
-          <span className="inline-block bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+          <span className="inline-block bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium">
             Step {stepNumber}
           </span>
         </div>
@@ -91,6 +93,8 @@ export function BaseStepView({
                   title={image.title}
                   headerBgColor={image.headerBgColor}
                   modalSrc={image.modalSrc}
+                  srcset={image.srcset}
+                  sizes={image.sizes}
                   onClick={() => setSelectedImage(image)}
                 />
               </div>
