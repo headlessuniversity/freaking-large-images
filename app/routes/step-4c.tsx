@@ -6,7 +6,8 @@ export function meta({}: Route.MetaArgs) {
     { title: "Step 4C: Quality Adjustment - Freaking Large Images" },
     {
       name: "description",
-      content: "Optimize file size using Contentful's quality parameter",
+      content:
+        "Optimize image file sizes using Contentful's quality parameter. Learn how to balance visual quality with file size for optimal web performance.",
     },
   ];
 }

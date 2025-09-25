@@ -1,7 +1,19 @@
 // Test route: Dynamic Contentful API parameter testing
+import type { Route } from "./+types/test";
 import { BaseStepView } from "../components/BaseStepView";
 import { getStepImages } from "../config/contentful-assets";
 import { useSearchParams } from "react-router";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Test Route - Contentful API Parameters - Freaking Large Images" },
+    {
+      name: "description",
+      content:
+        "Experiment with Contentful API parameters in real-time. Test different image optimization settings like format, quality, width, and height by adding them to the URL.",
+    },
+  ];
+}
 
 export default function Test() {
   const [searchParams] = useSearchParams();

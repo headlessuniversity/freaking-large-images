@@ -1,5 +1,16 @@
 import type { Route } from "./+types/$";
 
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Page Not Found - Freaking Large Images" },
+    {
+      name: "description",
+      content:
+        "The requested page could not be found. Return to the Freaking Large Images demo to learn about image optimization techniques.",
+    },
+  ];
+}
+
 export function loader({ request }: Route.LoaderArgs) {
   // For common browser requests, return appropriate responses
   const url = new URL(request.url);

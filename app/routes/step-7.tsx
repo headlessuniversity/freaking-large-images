@@ -7,7 +7,7 @@ export function meta({}: Route.MetaArgs) {
     {
       name: "description",
       content:
-        "Mobile-first responsive images using srcset - browser automatically selects optimal image size based on screen width",
+        "Implement mobile-first responsive images using srcset and sizes attributes. Let browsers automatically select the optimal image size based on device screen width and pixel density.",
     },
   ];
 }

@@ -6,7 +6,8 @@ export function meta({}: Route.MetaArgs) {
     { title: "Step 3: CDN (Contentful) - Freaking Large Images" },
     {
       name: "description",
-      content: "Images served from Contentful CDN for global distribution",
+      content:
+        "Discover how Content Delivery Networks (CDN) like Contentful provide global image distribution, reducing latency and improving load times worldwide.",
     },
   ];
 }

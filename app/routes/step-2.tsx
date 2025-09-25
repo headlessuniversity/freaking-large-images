@@ -6,7 +6,8 @@ export function meta({}: Route.MetaArgs) {
     { title: "Step 2: Public Folder - Freaking Large Images" },
     {
       name: "description",
-      content: "Images served from public directory for direct serving",
+      content:
+        "Learn how moving images to the public directory improves performance by enabling direct serving and bypassing bundler processing for faster load times.",
     },
   ];
 }

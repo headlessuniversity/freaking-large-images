@@ -7,7 +7,8 @@ export function meta({}: Route.MetaArgs) {
     { title: "Freaking Large Images - Image Optimization Demo" },
     {
       name: "description",
-      content: "Learn image optimization techniques step by step",
+      content:
+        "Learn modern image optimization techniques step by step. Discover CDN usage, WebP conversion, responsive images, sprites, and performance best practices for faster web loading.",
     },
   ];
 }

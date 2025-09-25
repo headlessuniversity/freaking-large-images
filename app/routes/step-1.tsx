@@ -6,7 +6,8 @@ export function meta({}: Route.MetaArgs) {
     { title: "Step 1: No Optimization - Freaking Large Images" },
     {
       name: "description",
-      content: "Baseline demonstration with no image optimization",
+      content:
+        "Baseline demonstration with no image optimization. See how large unoptimized images impact page load times and performance before applying optimization techniques.",
     },
   ];
 }

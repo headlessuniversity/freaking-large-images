@@ -7,7 +7,7 @@ export function meta({}: Route.MetaArgs) {
     {
       name: "description",
       content:
-        "Convert images to modern formats (WebP) using Contentful's format parameter",
+        "Learn how to convert images to modern WebP format using Contentful's format parameter. WebP provides superior compression and quality compared to JPEG and PNG.",
     },
   ];
 }

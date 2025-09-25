@@ -10,7 +10,7 @@ export function meta({}: Route.MetaArgs) {
     {
       name: "description",
       content:
-        "Combine cropping, stitching images together, and sprite technique for optimal thumbnails",
+        "Advanced image sprites technique: combine multiple images into one file and use CSS background-position for client-side cropping. Reduces HTTP requests from 4 to 1.",
     },
   ];
 }

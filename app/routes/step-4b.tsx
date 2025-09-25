@@ -7,7 +7,7 @@ export function meta({}: Route.MetaArgs) {
     {
       name: "description",
       content:
-        "Resize images dynamically using Contentful's width and height parameters",
+        "Master dynamic image resizing using Contentful's width and height parameters. Serve appropriately sized images to reduce bandwidth and improve loading speed.",
     },
   ];
 }

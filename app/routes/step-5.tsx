@@ -7,7 +7,7 @@ export function meta({}: Route.MetaArgs) {
     {
       name: "description",
       content:
-        "All optimizations combined - WebP format, resizing, and quality adjustment for maximum efficiency",
+        "See all image optimization techniques combined: WebP format conversion, dynamic resizing, and quality adjustment working together for maximum performance and efficiency.",
     },
   ];
 }
