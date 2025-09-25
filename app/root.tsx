@@ -13,21 +13,10 @@ import "./app.css";
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
-    rel: "preconnect",
-    href: "https://fonts.gstatic.com",
-    crossOrigin: "anonymous",
-  },
-  {
     rel: "preload",
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
     as: "style",
   },
-  // Fallback stylesheet for browsers that don't support preload
-  // {
-  //   rel: "stylesheet",
-  //   href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
-  //   media: "print",
-  // },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
