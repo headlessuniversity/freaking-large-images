@@ -1,0 +1,59 @@
+import { ImageCardUltra } from "./ImageCardUltra";
+import { ImageModal } from "./ImageModal";
+import { useState } from "react";
+
+interface StepImage {
+  src: string;
+  alt: string;
+  title: string;
+  headerBgColor: string;
+  modalSrc?: string; // Optional high-quality URL for modal
+}
+
+interface BaseStepViewUltraProps {
+  images: StepImage[];
+}
+
+export function BaseStepViewUltra({ images }: BaseStepViewUltraProps) {
+  const [selectedImage, setSelectedImage] = useState<StepImage | null>(null);
+
+  return (
+    <main className="min-h-screen bg-gray-900 p-4">
+      {/* Header */}
+      <div className="text-center mb-8 pt-8">
+        <h1 className="text-4xl font-bold text-white mb-2">
+          🖼️ Freaking Large Images
+        </h1>
+      </div>
+
+      {/* Image Layout - 2x2 on desktop, 1 column on mobile */}
+      <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
+        {images.map((image, index) => {
+          const cardClasses = "w-full sm:w-[calc(50%-0.5rem)]"; // Full width on mobile, half width on desktop
+
+          return (
+            <div key={index} className={cardClasses}>
+              <ImageCardUltra
+                src={image.src}
+                alt={image.alt}
+                title={image.title}
+                headerBgColor={image.headerBgColor}
+                modalSrc={image.modalSrc}
+                priority="high" // All images get high priority since they're all above-the-fold
+                onClick={() => setSelectedImage(image)}
+              />
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Modal - Shows high-quality modalSrc if available, otherwise falls back to display image */}
+      <ImageModal
+        src={selectedImage?.modalSrc || selectedImage?.src || ""}
+        alt={selectedImage?.alt || ""}
+        isOpen={!!selectedImage}
+        onClose={() => setSelectedImage(null)}
+      />
+    </main>
+  );
+}

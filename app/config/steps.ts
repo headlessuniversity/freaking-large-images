@@ -71,9 +71,19 @@ export const stepConfigs: StepConfig[] = [
     title: "Combined Optimization",
     shortTitle: "Step 5: Combined Optimization",
     description:
-      "All optimizations combined - WebP format, resizing, and quality adjustment for maximum efficiency",
+      "All optimizations combined - AVIF format, resizing, and quality adjustment for maximum efficiency",
     status: "ready",
     route: "/step-5",
+  },
+  {
+    id: "step-5-ultra",
+    number: 5,
+    title: "Ultimate Optimization",
+    shortTitle: "Step 5 Ultra: Ultimate Optimization",
+    description:
+      "AVIF format + resizing + quality + preloading + fetch priority for maximum LCP performance and Core Web Vitals",
+    status: "ready",
+    route: "/step-5-ultra",
   },
   {
     id: "step-6",

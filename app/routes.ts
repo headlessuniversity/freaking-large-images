@@ -9,6 +9,7 @@ export default [
   route("step-4b", "routes/step-4b.tsx"),
   route("step-4c", "routes/step-4c.tsx"),
   route("step-5", "routes/step-5.tsx"),
+  route("step-5-ultra", "routes/step-5-ultra.tsx"),
   route("step-6", "routes/step-6.tsx"),
   route("step-7", "routes/step-7.tsx"),
   route("step-8", "routes/step-8.tsx"),
