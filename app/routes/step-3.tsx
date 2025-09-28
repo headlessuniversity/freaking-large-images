@@ -12,10 +12,6 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export function loader({ context }: Route.LoaderArgs) {
-  return { message: context.VALUE_FROM_NETLIFY };
-}
-
-export default function StepThree({ loaderData }: Route.ComponentProps) {
-  return <StepThreeView message={loaderData.message} />;
+export default function StepThree() {
+  return <StepThreeView />;
 }

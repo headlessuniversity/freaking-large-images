@@ -1,7 +1,7 @@
 // Step 2: Images served directly from public directory
-import { BaseStepView } from "../../components/BaseStepView";
+import { BaseStepViewBasic } from "../../components/BaseStepViewBasic";
 
-export function StepTwo({ message }: { message: string }) {
+export function StepTwo() {
   const images = [
     {
       src: "/images/step-2/jezael-melgoza-layMbSJ3YOE-unsplash.jpg",
@@ -29,13 +29,5 @@ export function StepTwo({ message }: { message: string }) {
     },
   ];
 
-  return (
-    <BaseStepView
-      stepNumber={2}
-      title="Public Folder"
-      description="Images served directly from public directory - bypasses bundler processing for faster serving"
-      images={images}
-      message={message}
-    />
-  );
+  return <BaseStepViewBasic images={images} />;
 }

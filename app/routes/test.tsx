@@ -1,6 +1,6 @@
 // Test route: Dynamic Contentful API parameter testing
 import type { Route } from "./+types/test";
-import { BaseStepView } from "../components/BaseStepView";
+import { BaseStepViewBasic } from "../components/BaseStepViewBasic";
 import { getStepImages } from "../config/contentful-assets";
 import { useSearchParams } from "react-router";
 
@@ -29,7 +29,7 @@ export default function Test() {
   const displayParams = contentfulParams || "(no parameters - basic CDN)";
 
   return (
-    <BaseStepView
+    <BaseStepViewBasic
       stepNumber={0}
       title="Test Route"
       description={`Testing Contentful API parameters: ${displayParams}`}

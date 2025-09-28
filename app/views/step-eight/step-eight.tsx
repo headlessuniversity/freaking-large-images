@@ -1,6 +1,7 @@
 // Step 8: Dynamic content from Contentful API with multilingual support
 import { useState, useEffect } from "react";
-import { ImageCard } from "../../components/ImageCard";
+import { BaseStepViewResponsive } from "../../components/BaseStepViewResponsive";
+import { ImageCardSourceSet } from "../../components/ImageCardSourceSet";
 import { ImageModal } from "../../components/ImageModal";
 import {
   fetchContentfulAssets,
@@ -8,7 +9,7 @@ import {
   type DynamicImageData,
 } from "../../config/contentful-api";
 
-export function StepEight({ message }: { message: string }) {
+export function StepEight() {
   const [images, setImages] = useState<DynamicImageData[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedLocale, setSelectedLocale] = useState("en-US");
@@ -124,7 +125,7 @@ export function StepEight({ message }: { message: string }) {
         <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
           {images.map((image, index) => (
             <div key={image.id} className="w-full sm:w-[calc(50%-0.5rem)]">
-              <ImageCard
+              <ImageCardSourceSet
                 src={image.src}
                 srcset={image.srcset}
                 sizes={image.sizes}

@@ -15,10 +15,6 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export function loader({ context }: Route.LoaderArgs) {
-  return { message: context.VALUE_FROM_NETLIFY };
-}
-
-export default function StepSix({ loaderData }: Route.ComponentProps) {
-  return <StepSixView message={loaderData.message} />;
+export default function StepSix() {
+  return <StepSixView />;
 }

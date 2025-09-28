@@ -1,4 +1,4 @@
-import { BaseStepView } from "../../components/BaseStepView";
+import { BaseStepViewSprite } from "../../components/BaseStepViewSprite";
 import { contentfulAssets } from "../../config/contentful-assets";
 
 /*
@@ -24,7 +24,7 @@ const SPRITE_QUERY_PARAMS = "?fm=webp&q=50&h=1080";
 
 const SPRITE_URL = SPRITE_BASE_URL + SPRITE_QUERY_PARAMS;
 
-export function StepSix({ message }: { message: string }) {
+export function StepSix() {
   const spriteImages = [
     {
       spriteUrl: SPRITE_URL,
@@ -60,13 +60,5 @@ export function StepSix({ message }: { message: string }) {
     },
   ];
 
-  return (
-    <BaseStepView
-      stepNumber={6}
-      title="Image Sprites with Client-Side Cropping"
-      description="Single sprite image downloaded once, then cropped client-side using CSS background-position to show individual images - reduces HTTP requests from 4 to 1"
-      spriteImages={spriteImages}
-      message={message}
-    />
-  );
+  return <BaseStepViewSprite images={spriteImages} />;
 }

@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 
-interface ImageCardProps {
-  src: string;
+interface ImageCardSourceSetProps {
+  src: string; // Fallback image source
+  srcset: string; // Responsive srcset attribute
+  sizes: string; // Sizes attribute for responsive images
   alt: string;
   title: string;
   headerBgColor: string;
@@ -9,14 +11,16 @@ interface ImageCardProps {
   onClick?: () => void;
 }
 
-export function ImageCard({
+export function ImageCardSourceSet({
   src,
+  srcset,
+  sizes,
   alt,
   title,
   headerBgColor,
   modalSrc,
   onClick,
-}: ImageCardProps) {
+}: ImageCardSourceSetProps) {
   // Preload modal image after 2 seconds
   useEffect(() => {
     if (modalSrc) {
@@ -40,6 +44,8 @@ export function ImageCard({
       <div className="p-4">
         <img
           src={src}
+          srcSet={srcset}
+          sizes={sizes}
           alt={alt}
           className="w-full aspect-video object-cover rounded-md"
           loading="eager"

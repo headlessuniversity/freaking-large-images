@@ -4,9 +4,9 @@ import nasaImage from "./nasa-rTZW4f02zY8-unsplash.jpg";
 import phcImage1 from "./phc-software-3nSnUNGTUqo-unsplash.jpg";
 import phcImage2 from "./phc-software-Q0ClVjV8ts0-unsplash.jpg";
 
-import { BaseStepView } from "../../components/BaseStepView";
+import { BaseStepViewBasic } from "../../components/BaseStepViewBasic";
 
-export function StepOne({ message }: { message: string }) {
+export function StepOne() {
   const images = [
     {
       src: jezaelImage,
@@ -34,13 +34,5 @@ export function StepOne({ message }: { message: string }) {
     },
   ];
 
-  return (
-    <BaseStepView
-      stepNumber={1}
-      title="No Optimization"
-      description="Large images served from app directory - slowest approach (baseline for comparison)"
-      images={images}
-      message={message}
-    />
-  );
+  return <BaseStepViewBasic images={images} />;
 }

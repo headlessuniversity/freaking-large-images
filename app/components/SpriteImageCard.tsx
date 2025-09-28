@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 
-interface ImageCardProps {
-  src: string;
+interface SpriteImageCardProps {
+  spriteUrl: string;
+  spritePosition: number; // 0, 1, 2, or 3 for the four images
   alt: string;
   title: string;
   headerBgColor: string;
@@ -9,14 +10,19 @@ interface ImageCardProps {
   onClick?: () => void;
 }
 
-export function ImageCard({
-  src,
+export function SpriteImageCard({
+  spriteUrl,
+  spritePosition,
   alt,
   title,
   headerBgColor,
   modalSrc,
   onClick,
-}: ImageCardProps) {
+}: SpriteImageCardProps) {
+  // Calculate background position based on sprite position
+  // Position 0: 0%, Position 1: 33.33%, Position 2: 66.66%, Position 3: 100%
+  const backgroundPositionX = spritePosition * 33.33;
+
   // Preload modal image after 2 seconds
   useEffect(() => {
     if (modalSrc) {
@@ -38,11 +44,16 @@ export function ImageCard({
         <h2 className="font-semibold text-white">{title}</h2>
       </div>
       <div className="p-4">
-        <img
-          src={src}
-          alt={alt}
-          className="w-full aspect-video object-cover rounded-md"
-          loading="eager"
+        <div
+          className="w-full aspect-video rounded-md overflow-hidden" // Force 16:9 aspect ratio
+          style={{
+            backgroundImage: `url(${spriteUrl})`,
+            backgroundSize: "400% 100%", // 4 images wide, fill container height
+            backgroundPosition: `${backgroundPositionX}% center`,
+            backgroundRepeat: "no-repeat",
+          }}
+          role="img"
+          aria-label={alt}
         />
       </div>
     </div>
