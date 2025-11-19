@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Step 6 ALT: Contentful CDN with Deferred CSS - Freaking Large Images</title>
+    <title>
+      Step 6 ALT: Contentful CDN with Deferred CSS - Freaking Large Images
+    </title>
     <meta
       name="description"
-      content="Using Contentful's Image API with query parameters to serve optimized AVIF images at 600px width and 25% quality, delivered via CDN."
+      content="Extreme optimization test: AVIF images at 60px width and 1% quality, stretched to fit."
     />
     <!-- Preconnect to Contentful CDN for faster connection -->
     <link rel="preconnect" href="https://images.ctfassets.net" />
@@ -14,29 +16,29 @@
     <link
       rel="preload"
       as="image"
-      href="https://images.ctfassets.net/14fez5s3hrmy/ysZqMA6Oy9HbaYKnQcXXp/25ac3869e3b830f887dcd9908015f131/jezael-melgoza-layMbSJ3YOE-unsplash.jpg?fm=avif&w=600&q=60"
+      href="https://images.ctfassets.net/14fez5s3hrmy/ysZqMA6Oy9HbaYKnQcXXp/25ac3869e3b830f887dcd9908015f131/jezael-melgoza-layMbSJ3YOE-unsplash.jpg?fm=avif&w=60&q=1"
       fetchpriority="high"
     />
     <link
       rel="preload"
       as="image"
-      href="https://images.ctfassets.net/14fez5s3hrmy/6TF4uKd8b72TBhNRWRBRzt/21a8deb85e80e432c43edd48ef5b1255/nasa-rTZW4f02zY8-unsplash.jpg?fm=avif&w=600&q=60"
+      href="https://images.ctfassets.net/14fez5s3hrmy/6TF4uKd8b72TBhNRWRBRzt/21a8deb85e80e432c43edd48ef5b1255/nasa-rTZW4f02zY8-unsplash.jpg?fm=avif&w=60&q=1"
       fetchpriority="high"
     />
     <link
       rel="preload"
       as="image"
-      href="https://images.ctfassets.net/14fez5s3hrmy/6z0Rzfl7NFPao5iFVLsoA5/c73aa5e41798c532c94ecbfd830c417f/phc-software-3nSnUNGTUqo-unsplash.jpg?fm=avif&w=600&q=60"
+      href="https://images.ctfassets.net/14fez5s3hrmy/6z0Rzfl7NFPao5iFVLsoA5/c73aa5e41798c532c94ecbfd830c417f/phc-software-3nSnUNGTUqo-unsplash.jpg?fm=avif&w=60&q=1"
       fetchpriority="high"
     />
     <link
       rel="preload"
       as="image"
-      href="https://images.ctfassets.net/14fez5s3hrmy/4axEyF0Az0QeLv0V3wICcn/01d608c503905997bf7032d739f67e53/phc-software-Q0ClVjV8ts0-unsplash.jpg?fm=avif&w=600&q=60"
+      href="https://images.ctfassets.net/14fez5s3hrmy/4axEyF0Az0QeLv0V3wICcn/01d608c503905997bf7032d739f67e53/phc-software-Q0ClVjV8ts0-unsplash.jpg?fm=avif&w=60&q=1"
       fetchpriority="high"
     />
     <!-- External CSS file (gzipped by server) -->
-    <link rel="stylesheet" href="/simple/step-1.css">
+    <link rel="stylesheet" href="/simple/step-1.css" />
   </head>
   <body class="min-h-screen bg-gray-900 p-4">
     <!-- Header -->
@@ -45,7 +47,7 @@
         🖼️ Freaking Large Images
       </h1>
       <p class="text-white">
-        Step 6: Contentful CDN with avif, 600px width, 60% quality
+        Step 6 ALT: Extreme optimization - 60px width, 1% quality (stretched)
       </p>
     </header>
 
@@ -59,7 +61,7 @@
           </div>
           <div class="p-4">
             <img
-              src="https://images.ctfassets.net/14fez5s3hrmy/ysZqMA6Oy9HbaYKnQcXXp/25ac3869e3b830f887dcd9908015f131/jezael-melgoza-layMbSJ3YOE-unsplash.jpg?fm=avif&w=600&q=60"
+              src="https://images.ctfassets.net/14fez5s3hrmy/ysZqMA6Oy9HbaYKnQcXXp/25ac3869e3b830f887dcd9908015f131/jezael-melgoza-layMbSJ3YOE-unsplash.jpg?fm=avif&w=60&q=1"
               alt="Jezael Melgoza Photography"
               class="w-full aspect-video object-cover rounded-md"
               width="600"
@@ -79,7 +81,7 @@
           </div>
           <div class="p-4">
             <img
-              src="https://images.ctfassets.net/14fez5s3hrmy/6TF4uKd8b72TBhNRWRBRzt/21a8deb85e80e432c43edd48ef5b1255/nasa-rTZW4f02zY8-unsplash.jpg?fm=avif&w=600&q=60"
+              src="https://images.ctfassets.net/14fez5s3hrmy/6TF4uKd8b72TBhNRWRBRzt/21a8deb85e80e432c43edd48ef5b1255/nasa-rTZW4f02zY8-unsplash.jpg?fm=avif&w=60&q=1"
               alt="NASA Photography"
               class="w-full aspect-video object-cover rounded-md"
               width="600"
@@ -99,7 +101,7 @@
           </div>
           <div class="p-4">
             <img
-              src="https://images.ctfassets.net/14fez5s3hrmy/6z0Rzfl7NFPao5iFVLsoA5/c73aa5e41798c532c94ecbfd830c417f/phc-software-3nSnUNGTUqo-unsplash.jpg?fm=avif&w=600&q=60"
+              src="https://images.ctfassets.net/14fez5s3hrmy/6z0Rzfl7NFPao5iFVLsoA5/c73aa5e41798c532c94ecbfd830c417f/phc-software-3nSnUNGTUqo-unsplash.jpg?fm=avif&w=60&q=1"
               alt="PHC Software Photography 1"
               class="w-full aspect-video object-cover rounded-md"
               width="600"
@@ -118,7 +120,7 @@
           </div>
           <div class="p-4">
             <img
-              src="https://images.ctfassets.net/14fez5s3hrmy/4axEyF0Az0QeLv0V3wICcn/01d608c503905997bf7032d739f67e53/phc-software-Q0ClVjV8ts0-unsplash.jpg?fm=avif&w=600&q=60"
+              src="https://images.ctfassets.net/14fez5s3hrmy/4axEyF0Az0QeLv0V3wICcn/01d608c503905997bf7032d739f67e53/phc-software-Q0ClVjV8ts0-unsplash.jpg?fm=avif&w=60&q=1"
               alt="PHC Software Photography 2"
               class="w-full aspect-video object-cover rounded-md"
               width="600"
@@ -131,4 +133,3 @@
     </main>
   </body>
 </html>
-
