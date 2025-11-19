@@ -52,7 +52,7 @@ function PhcImage2({ queryString = "" }: { queryString?: string }) {
   );
 }
 
-export default function Experiment2() {
+export default function ExperimentX() {
   const [searchParams] = useSearchParams();
   const queryString = searchParams.toString()
     ? `?${searchParams.toString()}`
@@ -62,7 +62,7 @@ export default function Experiment2() {
     <main className="min-h-screen bg-gray-900 p-4">
       <header className="text-center mb-8 pt-8">
         <h1 className="text-4xl font-bold text-white mb-2">
-          Experiment 2: Contentful CDN (No Optimization)
+          Experiment X: Dynamic Testing (URL Params)
         </h1>
       </header>
 
@@ -74,7 +74,7 @@ export default function Experiment2() {
               <h2 className="font-semibold text-white">Jezael Melgoza Photo</h2>
             </div>
             <div className="p-4">
-              <JezaelImage />
+              <JezaelImage queryString={queryString} />
             </div>
           </div>
         </div>
@@ -86,7 +86,7 @@ export default function Experiment2() {
               <h2 className="font-semibold text-white">NASA Photo</h2>
             </div>
             <div className="p-4">
-              <NasaImage />
+              <NasaImage queryString={queryString} />
             </div>
           </div>
         </div>
@@ -98,7 +98,7 @@ export default function Experiment2() {
               <h2 className="font-semibold text-white">PHC Software Photo 1</h2>
             </div>
             <div className="p-4">
-              <PhcImage1 />
+              <PhcImage1 queryString={queryString} />
             </div>
           </div>
         </div>
@@ -110,7 +110,7 @@ export default function Experiment2() {
               <h2 className="font-semibold text-white">PHC Software Photo 2</h2>
             </div>
             <div className="p-4">
-              <PhcImage2 />
+              <PhcImage2 queryString={queryString} />
             </div>
           </div>
         </div>

@@ -5,6 +5,7 @@ export default [
   route("simple/:step", "routes/simple.$step.tsx"), // Serve HTML files directly
   route("experiment-1", "routes/experiment-1.tsx"),
   route("experiment-2", "routes/experiment-2.tsx"),
+  route("experiment-x", "routes/experiment-x.tsx"),
   route("experiment-final", "routes/experiment-final.tsx"),
   route("step-1", "routes/step-1.tsx"),
   route("step-2", "routes/step-2.tsx"),
