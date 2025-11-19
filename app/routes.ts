@@ -3,6 +3,9 @@ import { type RouteConfig, index, route } from "@react-router/dev/routes";
 export default [
   index("routes/home.tsx"),
   route("simple/:step", "routes/simple.$step.tsx"), // Serve HTML files directly
+  route("experiment-1", "routes/experiment-1.tsx"),
+  route("experiment-2", "routes/experiment-2.tsx"),
+  route("experiment-final", "routes/experiment-final.tsx"),
   route("step-1", "routes/step-1.tsx"),
   route("step-2", "routes/step-2.tsx"),
   route("step-3", "routes/step-3.tsx"),

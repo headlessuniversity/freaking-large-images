@@ -1,0 +1,139 @@
+import type { Route } from "./+types/experiment-final";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Final: 100 Lighthouse Score - Freaking Large Images" },
+    {
+      name: "description",
+      content: "Fully optimized Contentful CDN images with AVIF format, 600px width, 20% quality, and all performance optimizations applied.",
+    },
+  ];
+}
+
+export function links() {
+  return [
+    { rel: "preconnect", href: "https://images.ctfassets.net" },
+    {
+      rel: "preload",
+      as: "image",
+      href: "https://images.ctfassets.net/14fez5s3hrmy/ysZqMA6Oy9HbaYKnQcXXp/25ac3869e3b830f887dcd9908015f131/jezael-melgoza-layMbSJ3YOE-unsplash.jpg?fm=avif&w=600&q=20",
+      fetchPriority: "high",
+    },
+    {
+      rel: "preload",
+      as: "image",
+      href: "https://images.ctfassets.net/14fez5s3hrmy/6TF4uKd8b72TBhNRWRBRzt/21a8deb85e80e432c43edd48ef5b1255/nasa-rTZW4f02zY8-unsplash.jpg?fm=avif&w=600&q=20",
+      fetchPriority: "high",
+    },
+    {
+      rel: "preload",
+      as: "image",
+      href: "https://images.ctfassets.net/14fez5s3hrmy/6z0Rzfl7NFPao5iFVLsoA5/c73aa5e41798c532c94ecbfd830c417f/phc-software-3nSnUNGTUqo-unsplash.jpg?fm=avif&w=600&q=20",
+      fetchPriority: "high",
+    },
+    {
+      rel: "preload",
+      as: "image",
+      href: "https://images.ctfassets.net/14fez5s3hrmy/4axEyF0Az0QeLv0V3wICcn/01d608c503905997bf7032d739f67e53/phc-software-Q0ClVjV8ts0-unsplash.jpg?fm=avif&w=600&q=20",
+      fetchPriority: "high",
+    },
+  ];
+}
+
+export default function ExperimentFinal() {
+  return (
+    <main className="min-h-screen bg-gray-900 p-4">
+      <header className="text-center mb-8 pt-8">
+        <h1 className="text-4xl font-bold text-white mb-2">
+          Final Result: 100 Lighthouse Score
+        </h1>
+        <p className="text-white">
+          AVIF format, 600px width, 20% quality + all optimizations
+        </p>
+      </header>
+      
+      <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
+        {/* Image 1 - Jezael Melgoza */}
+        <div className="w-full sm:w-[calc(50%-0.5rem)]">
+          <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden h-fit">
+            <div className="p-4 bg-blue-700">
+              <h2 className="font-semibold text-white">Jezael Melgoza Photo</h2>
+            </div>
+            <div className="p-4">
+              <img 
+                src="https://images.ctfassets.net/14fez5s3hrmy/ysZqMA6Oy9HbaYKnQcXXp/25ac3869e3b830f887dcd9908015f131/jezael-melgoza-layMbSJ3YOE-unsplash.jpg?fm=avif&w=600&q=20"
+                alt="Jezael Melgoza Photography"
+                className="w-full aspect-video object-cover rounded-md"
+                width="600"
+                height="337"
+                loading="eager"
+                fetchPriority="high"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Image 2 - NASA */}
+        <div className="w-full sm:w-[calc(50%-0.5rem)]">
+          <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden h-fit">
+            <div className="p-4 bg-purple-700">
+              <h2 className="font-semibold text-white">NASA Photo</h2>
+            </div>
+            <div className="p-4">
+              <img 
+                src="https://images.ctfassets.net/14fez5s3hrmy/6TF4uKd8b72TBhNRWRBRzt/21a8deb85e80e432c43edd48ef5b1255/nasa-rTZW4f02zY8-unsplash.jpg?fm=avif&w=600&q=20"
+                alt="NASA Photography"
+                className="w-full aspect-video object-cover rounded-md"
+                width="600"
+                height="337"
+                loading="eager"
+                fetchPriority="high"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Image 3 - PHC Software 1 */}
+        <div className="w-full sm:w-[calc(50%-0.5rem)]">
+          <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden h-fit">
+            <div className="p-4 bg-green-700">
+              <h2 className="font-semibold text-white">PHC Software Photo 1</h2>
+            </div>
+            <div className="p-4">
+              <img 
+                src="https://images.ctfassets.net/14fez5s3hrmy/6z0Rzfl7NFPao5iFVLsoA5/c73aa5e41798c532c94ecbfd830c417f/phc-software-3nSnUNGTUqo-unsplash.jpg?fm=avif&w=600&q=20"
+                alt="PHC Software Photography 1"
+                className="w-full aspect-video object-cover rounded-md"
+                width="600"
+                height="337"
+                loading="eager"
+                fetchPriority="high"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Image 4 - PHC Software 2 */}
+        <div className="w-full sm:w-[calc(50%-0.5rem)]">
+          <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden h-fit">
+            <div className="p-4 bg-orange-700">
+              <h2 className="font-semibold text-white">PHC Software Photo 2</h2>
+            </div>
+            <div className="p-4">
+              <img 
+                src="https://images.ctfassets.net/14fez5s3hrmy/4axEyF0Az0QeLv0V3wICcn/01d608c503905997bf7032d739f67e53/phc-software-Q0ClVjV8ts0-unsplash.jpg?fm=avif&w=600&q=20"
+                alt="PHC Software Photography 2"
+                className="w-full aspect-video object-cover rounded-md"
+                width="600"
+                height="337"
+                loading="eager"
+                fetchPriority="high"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+}
+
