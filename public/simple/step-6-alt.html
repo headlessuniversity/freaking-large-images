@@ -6,12 +6,35 @@
     <title>Step 6 ALT: Contentful CDN with Deferred CSS - Freaking Large Images</title>
     <meta
       name="description"
-      content="Using Contentful's Image API with query parameters to serve optimized WebP images at 600px width and 20% quality, delivered via CDN."
+      content="Using Contentful's Image API with query parameters to serve optimized AVIF images at 600px width and 25% quality, delivered via CDN."
     />
     <!-- Preconnect to Contentful CDN for faster connection -->
-    <link rel="preconnect" href="https://images.ctfassets.net">
+    <link rel="preconnect" href="https://images.ctfassets.net" />
     <!-- Preload the LCP image -->
-    <link rel="preload" as="image" href="https://images.ctfassets.net/14fez5s3hrmy/ysZqMA6Oy9HbaYKnQcXXp/25ac3869e3b830f887dcd9908015f131/jezael-melgoza-layMbSJ3YOE-unsplash.jpg?fm=webp&w=600&q=20" fetchpriority="high">
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.ctfassets.net/14fez5s3hrmy/ysZqMA6Oy9HbaYKnQcXXp/25ac3869e3b830f887dcd9908015f131/jezael-melgoza-layMbSJ3YOE-unsplash.jpg?fm=avif&w=600&q=25"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.ctfassets.net/14fez5s3hrmy/6TF4uKd8b72TBhNRWRBRzt/21a8deb85e80e432c43edd48ef5b1255/nasa-rTZW4f02zY8-unsplash.jpg?fm=avif&w=600&q=25"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.ctfassets.net/14fez5s3hrmy/6z0Rzfl7NFPao5iFVLsoA5/c73aa5e41798c532c94ecbfd830c417f/phc-software-3nSnUNGTUqo-unsplash.jpg?fm=avif&w=600&q=25"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.ctfassets.net/14fez5s3hrmy/4axEyF0Az0QeLv0V3wICcn/01d608c503905997bf7032d739f67e53/phc-software-Q0ClVjV8ts0-unsplash.jpg?fm=avif&w=600&q=25"
+      fetchpriority="high"
+    />
     <!-- External CSS file (gzipped by server) -->
     <link rel="stylesheet" href="/simple/step-1.css">
   </head>
@@ -21,7 +44,9 @@
       <h1 class="text-4xl font-bold text-white mb-2">
         🖼️ Freaking Large Images
       </h1>
-      <p class="text-white">Step 6 ALT: Deferred CSS + WebP, 600px width, 20% quality</p>
+      <p class="text-white">
+        Step 6: Contentful CDN with avif, 600px width, 20% quality
+      </p>
     </header>
 
     <!-- Main Content - Image Grid -->
@@ -34,7 +59,7 @@
           </div>
           <div class="p-4">
             <img
-              src="https://images.ctfassets.net/14fez5s3hrmy/ysZqMA6Oy9HbaYKnQcXXp/25ac3869e3b830f887dcd9908015f131/jezael-melgoza-layMbSJ3YOE-unsplash.jpg?fm=webp&w=600&q=20"
+              src="https://images.ctfassets.net/14fez5s3hrmy/ysZqMA6Oy9HbaYKnQcXXp/25ac3869e3b830f887dcd9908015f131/jezael-melgoza-layMbSJ3YOE-unsplash.jpg?fm=avif&w=600&q=25"
               alt="Jezael Melgoza Photography"
               class="w-full aspect-video object-cover rounded-md"
               width="600"
@@ -54,7 +79,7 @@
           </div>
           <div class="p-4">
             <img
-              src="https://images.ctfassets.net/14fez5s3hrmy/6TF4uKd8b72TBhNRWRBRzt/21a8deb85e80e432c43edd48ef5b1255/nasa-rTZW4f02zY8-unsplash.jpg?fm=webp&w=600&q=20"
+              src="https://images.ctfassets.net/14fez5s3hrmy/6TF4uKd8b72TBhNRWRBRzt/21a8deb85e80e432c43edd48ef5b1255/nasa-rTZW4f02zY8-unsplash.jpg?fm=avif&w=600&q=25"
               alt="NASA Photography"
               class="w-full aspect-video object-cover rounded-md"
               width="600"
@@ -74,7 +99,7 @@
           </div>
           <div class="p-4">
             <img
-              src="https://images.ctfassets.net/14fez5s3hrmy/6z0Rzfl7NFPao5iFVLsoA5/c73aa5e41798c532c94ecbfd830c417f/phc-software-3nSnUNGTUqo-unsplash.jpg?fm=webp&w=600&q=20"
+              src="https://images.ctfassets.net/14fez5s3hrmy/6z0Rzfl7NFPao5iFVLsoA5/c73aa5e41798c532c94ecbfd830c417f/phc-software-3nSnUNGTUqo-unsplash.jpg?fm=avif&w=600&q=25"
               alt="PHC Software Photography 1"
               class="w-full aspect-video object-cover rounded-md"
               width="600"
@@ -93,7 +118,7 @@
           </div>
           <div class="p-4">
             <img
-              src="https://images.ctfassets.net/14fez5s3hrmy/4axEyF0Az0QeLv0V3wICcn/01d608c503905997bf7032d739f67e53/phc-software-Q0ClVjV8ts0-unsplash.jpg?fm=webp&w=600&q=20"
+              src="https://images.ctfassets.net/14fez5s3hrmy/4axEyF0Az0QeLv0V3wICcn/01d608c503905997bf7032d739f67e53/phc-software-Q0ClVjV8ts0-unsplash.jpg?fm=avif&w=600&q=25"
               alt="PHC Software Photography 2"
               class="w-full aspect-video object-cover rounded-md"
               width="600"
