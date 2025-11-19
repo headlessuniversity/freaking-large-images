@@ -1,7 +1,6 @@
-// Image 1: Jezael Melgoza - Baseline from public folder
 function JezaelImage() {
   return (
-    <img 
+    <img
       src="/images/jezael-melgoza-layMbSJ3YOE-unsplash.jpg"
       alt="Jezael Melgoza Photography"
       className="w-full aspect-video object-cover rounded-md"
@@ -9,10 +8,9 @@ function JezaelImage() {
   );
 }
 
-// Image 2: NASA - Baseline from public folder
 function NasaImage() {
   return (
-    <img 
+    <img
       src="/images/nasa-rTZW4f02zY8-unsplash.jpg"
       alt="NASA Photography"
       className="w-full aspect-video object-cover rounded-md"
@@ -20,10 +18,9 @@ function NasaImage() {
   );
 }
 
-// Image 3: PHC Software 1 - Baseline from public folder
 function PhcImage1() {
   return (
-    <img 
+    <img
       src="/images/phc-software-3nSnUNGTUqo-unsplash.jpg"
       alt="PHC Software Photography 1"
       className="w-full aspect-video object-cover rounded-md"
@@ -34,7 +31,7 @@ function PhcImage1() {
 // Image 4: PHC Software 2 - Baseline from public folder
 function PhcImage2() {
   return (
-    <img 
+    <img
       src="/images/phc-software-Q0ClVjV8ts0-unsplash.jpg"
       alt="PHC Software Photography 2"
       className="w-full aspect-video object-cover rounded-md"
@@ -50,7 +47,7 @@ export default function Experiment1() {
           Experiment 1: Baseline (Public Folder)
         </h1>
       </header>
-      
+
       <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
         {/* Image 1 - Jezael Melgoza */}
         <div className="w-full sm:w-[calc(50%-0.5rem)]">
@@ -103,4 +100,3 @@ export default function Experiment1() {
     </main>
   );
 }
-
