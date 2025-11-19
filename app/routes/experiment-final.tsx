@@ -40,6 +40,66 @@ export function links() {
   ];
 }
 
+// Image 1: Jezael Melgoza - Fully optimized with all performance hints
+function JezaelImage() {
+  return (
+    <img 
+      src="https://images.ctfassets.net/14fez5s3hrmy/ysZqMA6Oy9HbaYKnQcXXp/25ac3869e3b830f887dcd9908015f131/jezael-melgoza-layMbSJ3YOE-unsplash.jpg?fm=avif&w=600&q=20"
+      alt="Jezael Melgoza Photography"
+      className="w-full aspect-video object-cover rounded-md"
+      width="600"
+      height="337"
+      loading="eager"
+      fetchPriority="high"
+    />
+  );
+}
+
+// Image 2: NASA - Fully optimized with all performance hints
+function NasaImage() {
+  return (
+    <img 
+      src="https://images.ctfassets.net/14fez5s3hrmy/6TF4uKd8b72TBhNRWRBRzt/21a8deb85e80e432c43edd48ef5b1255/nasa-rTZW4f02zY8-unsplash.jpg?fm=avif&w=600&q=20"
+      alt="NASA Photography"
+      className="w-full aspect-video object-cover rounded-md"
+      width="600"
+      height="337"
+      loading="eager"
+      fetchPriority="high"
+    />
+  );
+}
+
+// Image 3: PHC Software 1 - Fully optimized with all performance hints
+function PhcImage1() {
+  return (
+    <img 
+      src="https://images.ctfassets.net/14fez5s3hrmy/6z0Rzfl7NFPao5iFVLsoA5/c73aa5e41798c532c94ecbfd830c417f/phc-software-3nSnUNGTUqo-unsplash.jpg?fm=avif&w=600&q=20"
+      alt="PHC Software Photography 1"
+      className="w-full aspect-video object-cover rounded-md"
+      width="600"
+      height="337"
+      loading="eager"
+      fetchPriority="high"
+    />
+  );
+}
+
+// Image 4: PHC Software 2 - Fully optimized with all performance hints
+function PhcImage2() {
+  return (
+    <img 
+      src="https://images.ctfassets.net/14fez5s3hrmy/4axEyF0Az0QeLv0V3wICcn/01d608c503905997bf7032d739f67e53/phc-software-Q0ClVjV8ts0-unsplash.jpg?fm=avif&w=600&q=20"
+      alt="PHC Software Photography 2"
+      className="w-full aspect-video object-cover rounded-md"
+      width="600"
+      height="337"
+      loading="eager"
+      fetchPriority="high"
+    />
+  );
+}
+
 export default function ExperimentFinal() {
   return (
     <main className="min-h-screen bg-gray-900 p-4">
@@ -60,15 +120,7 @@ export default function ExperimentFinal() {
               <h2 className="font-semibold text-white">Jezael Melgoza Photo</h2>
             </div>
             <div className="p-4">
-              <img 
-                src="https://images.ctfassets.net/14fez5s3hrmy/ysZqMA6Oy9HbaYKnQcXXp/25ac3869e3b830f887dcd9908015f131/jezael-melgoza-layMbSJ3YOE-unsplash.jpg?fm=avif&w=600&q=20"
-                alt="Jezael Melgoza Photography"
-                className="w-full aspect-video object-cover rounded-md"
-                width="600"
-                height="337"
-                loading="eager"
-                fetchPriority="high"
-              />
+              <JezaelImage />
             </div>
           </div>
         </div>
@@ -80,15 +132,7 @@ export default function ExperimentFinal() {
               <h2 className="font-semibold text-white">NASA Photo</h2>
             </div>
             <div className="p-4">
-              <img 
-                src="https://images.ctfassets.net/14fez5s3hrmy/6TF4uKd8b72TBhNRWRBRzt/21a8deb85e80e432c43edd48ef5b1255/nasa-rTZW4f02zY8-unsplash.jpg?fm=avif&w=600&q=20"
-                alt="NASA Photography"
-                className="w-full aspect-video object-cover rounded-md"
-                width="600"
-                height="337"
-                loading="eager"
-                fetchPriority="high"
-              />
+              <NasaImage />
             </div>
           </div>
         </div>
@@ -100,15 +144,7 @@ export default function ExperimentFinal() {
               <h2 className="font-semibold text-white">PHC Software Photo 1</h2>
             </div>
             <div className="p-4">
-              <img 
-                src="https://images.ctfassets.net/14fez5s3hrmy/6z0Rzfl7NFPao5iFVLsoA5/c73aa5e41798c532c94ecbfd830c417f/phc-software-3nSnUNGTUqo-unsplash.jpg?fm=avif&w=600&q=20"
-                alt="PHC Software Photography 1"
-                className="w-full aspect-video object-cover rounded-md"
-                width="600"
-                height="337"
-                loading="eager"
-                fetchPriority="high"
-              />
+              <PhcImage1 />
             </div>
           </div>
         </div>
@@ -120,15 +156,7 @@ export default function ExperimentFinal() {
               <h2 className="font-semibold text-white">PHC Software Photo 2</h2>
             </div>
             <div className="p-4">
-              <img 
-                src="https://images.ctfassets.net/14fez5s3hrmy/4axEyF0Az0QeLv0V3wICcn/01d608c503905997bf7032d739f67e53/phc-software-Q0ClVjV8ts0-unsplash.jpg?fm=avif&w=600&q=20"
-                alt="PHC Software Photography 2"
-                className="w-full aspect-video object-cover rounded-md"
-                width="600"
-                height="337"
-                loading="eager"
-                fetchPriority="high"
-              />
+              <PhcImage2 />
             </div>
           </div>
         </div>

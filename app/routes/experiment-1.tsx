@@ -1,3 +1,47 @@
+// Image 1: Jezael Melgoza - Baseline from public folder
+function JezaelImage() {
+  return (
+    <img 
+      src="/images/jezael-melgoza-layMbSJ3YOE-unsplash.jpg"
+      alt="Jezael Melgoza Photography"
+      className="w-full aspect-video object-cover rounded-md"
+    />
+  );
+}
+
+// Image 2: NASA - Baseline from public folder
+function NasaImage() {
+  return (
+    <img 
+      src="/images/nasa-rTZW4f02zY8-unsplash.jpg"
+      alt="NASA Photography"
+      className="w-full aspect-video object-cover rounded-md"
+    />
+  );
+}
+
+// Image 3: PHC Software 1 - Baseline from public folder
+function PhcImage1() {
+  return (
+    <img 
+      src="/images/phc-software-3nSnUNGTUqo-unsplash.jpg"
+      alt="PHC Software Photography 1"
+      className="w-full aspect-video object-cover rounded-md"
+    />
+  );
+}
+
+// Image 4: PHC Software 2 - Baseline from public folder
+function PhcImage2() {
+  return (
+    <img 
+      src="/images/phc-software-Q0ClVjV8ts0-unsplash.jpg"
+      alt="PHC Software Photography 2"
+      className="w-full aspect-video object-cover rounded-md"
+    />
+  );
+}
+
 export default function Experiment1() {
   return (
     <main className="min-h-screen bg-gray-900 p-4">
@@ -15,12 +59,7 @@ export default function Experiment1() {
               <h2 className="font-semibold text-white">Jezael Melgoza Photo</h2>
             </div>
             <div className="p-4">
-              <img 
-                src="/images/jezael-melgoza-layMbSJ3YOE-unsplash.jpg"
-                alt="Jezael Melgoza Photography"
-                className="w-full aspect-video object-cover rounded-md"
-                loading="eager"
-              />
+              <JezaelImage />
             </div>
           </div>
         </div>
@@ -32,12 +71,7 @@ export default function Experiment1() {
               <h2 className="font-semibold text-white">NASA Photo</h2>
             </div>
             <div className="p-4">
-              <img 
-                src="/images/nasa-rTZW4f02zY8-unsplash.jpg"
-                alt="NASA Photography"
-                className="w-full aspect-video object-cover rounded-md"
-                loading="eager"
-              />
+              <NasaImage />
             </div>
           </div>
         </div>
@@ -49,12 +83,7 @@ export default function Experiment1() {
               <h2 className="font-semibold text-white">PHC Software Photo 1</h2>
             </div>
             <div className="p-4">
-              <img 
-                src="/images/phc-software-3nSnUNGTUqo-unsplash.jpg"
-                alt="PHC Software Photography 1"
-                className="w-full aspect-video object-cover rounded-md"
-                loading="eager"
-              />
+              <PhcImage1 />
             </div>
           </div>
         </div>
@@ -66,12 +95,7 @@ export default function Experiment1() {
               <h2 className="font-semibold text-white">PHC Software Photo 2</h2>
             </div>
             <div className="p-4">
-              <img 
-                src="/images/phc-software-Q0ClVjV8ts0-unsplash.jpg"
-                alt="PHC Software Photography 2"
-                className="w-full aspect-video object-cover rounded-md"
-                loading="eager"
-              />
+              <PhcImage2 />
             </div>
           </div>
         </div>
