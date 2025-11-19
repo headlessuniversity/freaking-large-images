@@ -6,7 +6,7 @@ export async function loader({ params }: LoaderFunctionArgs) {
   const { step } = params;
   
   // Only allow specific step values for security
-  const allowedSteps = ["step-1", "step-6"];
+  const allowedSteps = ["step-1", "step-6", "step-1-alt", "step-6-alt"];
   
   if (!step || !allowedSteps.includes(step)) {
     throw new Response("Not Found", { status: 404 });
