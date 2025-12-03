@@ -13,8 +13,8 @@ const tempDir = resolve(__dirname, '.temp-build');
 await fs.mkdir(tempDir, { recursive: true });
 
 // Copy our actual HTML to the temp dir so Tailwind can scan it
-const actualHTML = await fs.readFile(resolve(__dirname, 'public/simple/step-1.html'), 'utf-8');
-await fs.writeFile(resolve(tempDir, 'step-1.html'), actualHTML);
+const actualHTML = await fs.readFile(resolve(__dirname, 'public/landing-pages/space-camp.html'), 'utf-8');
+await fs.writeFile(resolve(tempDir, 'space-camp.html'), actualHTML);
 
 // Create a CSS input file
 const cssInput = `@import "tailwindcss";`;
@@ -56,7 +56,7 @@ const cssFile = files.find(f => f.endsWith('.css'));
 if (cssFile) {
   const cssContent = await fs.readFile(resolve(assetsDir, cssFile), 'utf-8');
   const cssBuffer = Buffer.from(cssContent, 'utf-8');
-  const outputPath = resolve(__dirname, 'public/simple/step-1.css');
+  const outputPath = resolve(__dirname, 'public/landing-pages/space-camp.css');
   
   // Write the minified CSS
   await fs.writeFile(outputPath, cssContent);
@@ -73,7 +73,7 @@ if (cssFile) {
   });
   await fs.writeFile(outputPath + '.br', brotli);
   
-  console.log('✅ Generated step-1.css');
+  console.log('✅ Generated space-camp.css');
   console.log(`   Original: ${cssContent.length.toLocaleString()} bytes`);
   console.log(`   Gzipped:  ${gzipped.length.toLocaleString()} bytes (${((gzipped.length / cssContent.length) * 100).toFixed(1)}%)`);
   console.log(`   Brotli:   ${brotli.length.toLocaleString()} bytes (${((brotli.length / cssContent.length) * 100).toFixed(1)}%)`);
